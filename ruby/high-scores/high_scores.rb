@@ -8,4 +8,8 @@ class HighScores
   def latest
     @scores.last
   end
+
+  def personal_best
+    @scores.max
+  end
 end
