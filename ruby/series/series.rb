@@ -4,6 +4,7 @@ class Series
   end
 
   def slices(slice_length)
+    raise ArgumentError if slice_length > @series.length
     out = []
     for i in 0..(@series.length-1)
       slice_index_end = (i-1) + slice_length
