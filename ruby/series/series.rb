@@ -6,7 +6,12 @@ class Series
   def slices(slice_length)
     out = []
     for i in 0..(@series.length-1)
-      out.push(@series[i])
+      slice_index_end = (i-1) + slice_length
+      next if slice_index_end > @series.length-1
+      n = i..slice_index_end
+      string = ''
+      n.each { |l| string += @series[l] }
+      out.push(string)
     end
     out
   end
