@@ -12,4 +12,8 @@ class HighScores
   def personal_best
     @scores.max
   end
+
+  def latest_is_personal_best?
+    latest.equal?(personal_best)
+  end
 end
