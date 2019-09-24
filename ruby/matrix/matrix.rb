@@ -4,9 +4,7 @@ class Matrix
   end
 
   def rows
-    [
-      [1, 2],
-      [10, 20]
-    ]
+    rows = @grid.split("\n")
+    rows.map { |row| row.split(" ").map(&:to_i) }
   end
 end
