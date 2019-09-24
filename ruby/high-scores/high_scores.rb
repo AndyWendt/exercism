@@ -6,6 +6,6 @@ class HighScores
   end
 
   def latest
-    @scores[@scores.length - 1]
+    @scores.last
   end
 end
