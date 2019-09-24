@@ -9,10 +9,10 @@ class Series
     for i in 0..(@series.length-1)
       slice_index_end = (i-1) + slice_length
       next if slice_index_end > @series.length-1
-      n = i..slice_index_end
-      string = ''
-      n.each { |l| string += @series[l] }
-      out.push(string)
+      segment_indexes = i..slice_index_end
+      segment = ''
+      segment_indexes.each { |l| segment += @series[l] }
+      out.push(segment)
     end
     out
   end
