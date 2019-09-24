@@ -7,4 +7,8 @@ class Matrix
     rows = @grid.split("\n")
     rows.map { |row| row.split(" ").map(&:to_i) }
   end
+
+  def columns
+    rows.transpose
+  end
 end

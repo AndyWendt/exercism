@@ -23,13 +23,11 @@ class MatrixTest < Minitest::Test
   end
 
   def test_extract_a_column
-    skip
     matrix = Matrix.new("1 2 3\n4 5 6\n7 8 9\n 8 7 6")
     assert_equal [1, 4, 7, 8], matrix.columns[0]
   end
 
   def test_extract_another_column
-    skip
     matrix = Matrix.new("89 1903 3\n18 3 1\n9 4 800")
     assert_equal [1903, 3, 4], matrix.columns[1]
   end
