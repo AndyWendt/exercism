@@ -4,7 +4,6 @@ require_relative 'word_count'
 # Common test data version: 1.2.0 77623ec
 class WordCountTest < Minitest::Test
   def test_count_one_word
-    # skip
     phrase = Phrase.new("word")
     counts = {"word"=>1}
     assert_equal counts, phrase.word_count
