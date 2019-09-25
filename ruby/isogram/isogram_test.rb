@@ -19,13 +19,11 @@ class IsogramTest < Minitest::Test
   end
 
   def test_word_with_one_duplicated_character_from_the_end_of_the_alphabet
-    skip
     input = "zzyzx"
     refute Isogram.isogram?(input), "Expected false, '#{input}' is not an isogram"
   end
 
   def test_longest_reported_english_isogram
-    skip
     input = "subdermatoglyphic"
     assert Isogram.isogram?(input), "Expected true, '#{input}' is an isogram"
   end
