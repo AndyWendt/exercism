@@ -49,7 +49,6 @@ class IsogramTest < Minitest::Test
   end
 
   def test_isogram_with_duplicated_hyphen
-    skip
     input = "six-year-old"
     assert Isogram.isogram?(input), "Expected true, '#{input}' is an isogram"
   end
