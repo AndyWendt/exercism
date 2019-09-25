@@ -29,7 +29,6 @@ class IsogramTest < Minitest::Test
   end
 
   def test_word_with_duplicated_character_in_mixed_case
-    skip
     input = "Alphabet"
     refute Isogram.isogram?(input), "Expected false, '#{input}' is not an isogram"
   end
