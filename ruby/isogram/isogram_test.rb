@@ -54,7 +54,6 @@ class IsogramTest < Minitest::Test
   end
 
   def test_made_up_name_that_is_an_isogram
-    skip
     input = "Emily Jung Schwartzkopf"
     assert Isogram.isogram?(input), "Expected true, '#{input}' is an isogram"
   end
