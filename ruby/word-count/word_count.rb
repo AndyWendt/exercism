@@ -1,6 +1,7 @@
 class Phrase
   def initialize(string)
-    @words = string.strip!.gsub(/[^0-9A-Za-z,' ]/, '').split(/(?:[, \s]+)/)
+    phrase_string = string.strip.gsub(/[^0-9A-Za-z,' ]/, '')
+    @words = replace_quotes(phrase_string).split(/(?:[, \s]+)/)
   end
 
   def word_count
@@ -10,5 +11,18 @@ class Phrase
       hash[word] = current_count
       hash
     end
+  end
+
+  private
+
+  def replace_quotes(phrase_string)
+    matches = phrase_string.scan(/'[a-zA-Z]+'/) || []
+
+    matches.each do |match|
+      find = match
+      replace = find.gsub("'", '')
+      phrase_string = phrase_string.gsub(find, replace)
+    end
+    phrase_string
   end
 end
