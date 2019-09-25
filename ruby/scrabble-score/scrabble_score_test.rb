@@ -19,22 +19,18 @@ class ScrabbleTest < Minitest::Test
   end
 
   def test_scores_other_very_short_word
-    skip
     assert_equal 4, Scrabble.new('f').score
   end
 
   def test_simple_word_scores_the_number_of_letters
-    skip
     assert_equal 6, Scrabble.new('street').score
   end
 
   def test_complicated_word_scores_more
-    skip
     assert_equal 22, Scrabble.new('quirky').score
   end
 
   def test_scores_are_case_insensitive
-    skip
     assert_equal 41, Scrabble.new('OXYPHENBUTAZONE').score
   end
 
