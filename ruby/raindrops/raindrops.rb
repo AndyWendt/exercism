@@ -2,6 +2,8 @@ require 'prime'
 
 class Raindrops
   def self.convert(number)
-    "1"
+    factors = number.prime_division.flatten
+    return 'Pling' if factors.include?(3)
+    number.to_s
   end
 end

@@ -8,7 +8,6 @@ class RaindropsTest < Minitest::Test
   end
 
   def test_the_sound_for_3_is_pling
-    skip
     assert_equal "Pling", Raindrops.convert(3)
   end
 
