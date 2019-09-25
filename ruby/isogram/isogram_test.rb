@@ -14,7 +14,6 @@ class IsogramTest < Minitest::Test
   end
 
   def test_word_with_one_duplicated_character
-    skip
     input = "eleven"
     refute Isogram.isogram?(input), "Expected false, '#{input}' is not an isogram"
   end
