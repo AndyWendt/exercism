@@ -1,6 +1,6 @@
 class Phrase
   def initialize(string)
-    @words = string.gsub(/[^0-9A-Za-z[:punct:]] /, '').split(/(?:[[:punct:], \s]+)/)
+    @words = string.gsub(/[^0-9A-Za-z, ]/, '').split(/(?:[[:punct:], \s]+)/)
   end
 
   def word_count
