@@ -4,13 +4,11 @@ require_relative 'isogram'
 # Common test data version: 1.7.0 74869e8
 class IsogramTest < Minitest::Test
   def test_empty_string
-    # skip
     input = ""
     assert Isogram.isogram?(input), "Expected true, '#{input}' is an isogram"
   end
 
   def test_isogram_with_only_lower_case_characters
-    skip
     input = "isogram"
     assert Isogram.isogram?(input), "Expected true, '#{input}' is an isogram"
   end
