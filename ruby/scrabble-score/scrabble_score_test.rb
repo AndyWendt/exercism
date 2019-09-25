@@ -15,7 +15,6 @@ class ScrabbleTest < Minitest::Test
   end
 
   def test_scores_very_short_word
-    skip
     assert_equal 1, Scrabble.new('a').score
   end
 
