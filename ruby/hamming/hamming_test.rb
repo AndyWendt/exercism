@@ -8,7 +8,6 @@ class HammingTest < Minitest::Test
   end
 
   def test_single_letter_identical_strands
-    skip
     assert_equal 0, Hamming.compute('A', 'A')
   end
 
