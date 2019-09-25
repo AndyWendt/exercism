@@ -20,7 +20,6 @@ class RaindropsTest < Minitest::Test
   end
 
   def test_the_sound_for_6_is_pling_as_it_has_a_factor_3
-    skip
     assert_equal "Pling", Raindrops.convert(6)
   end
 
