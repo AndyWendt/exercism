@@ -19,9 +19,8 @@ class Phrase
     matches = phrase_string.scan(/'[a-zA-Z]+'/) || []
 
     matches.each do |match|
-      find = match
-      replace = find.gsub("'", '')
-      phrase_string = phrase_string.gsub(find, replace)
+      replace = match.gsub("'", '')
+      phrase_string = phrase_string.gsub(match, replace)
     end
     phrase_string
   end
