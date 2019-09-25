@@ -43,4 +43,8 @@ class Scrabble
     end
     score
   end
+
+  def self.score(string)
+    self.new(string).score
+  end
 end
