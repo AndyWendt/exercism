@@ -8,22 +8,18 @@ class LuhnTest < Minitest::Test
   end
 
   def test_a_single_zero_is_invalid
-    skip
     refute Luhn.valid?("0")
   end
 
   def test_a_simple_valid_sin_that_remains_valid_if_reversed
-    skip
     assert Luhn.valid?("059")
   end
 
   def test_a_simple_valid_sin_that_becomes_invalid_if_reversed
-    skip
     assert Luhn.valid?("59")
   end
 
   def test_a_valid_canadian_sin
-    skip
     assert Luhn.valid?("055 444 285")
   end
 
