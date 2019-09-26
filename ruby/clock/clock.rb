@@ -27,6 +27,10 @@ class Clock
     Clock.new(hour: hour, minute: minute)
   end
 
+  def ==(clock_b)
+    @hour == clock_b.hour && @minute == clock_b.minute
+  end
+
   private
 
   def create_time_string(number)

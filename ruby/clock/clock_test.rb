@@ -165,21 +165,18 @@ class ClockTest < Minitest::Test
   end
 
   def test_clocks_with_same_time
-    skip
     clock1 = Clock.new(hour: 15, minute: 37)
     clock2 = Clock.new(hour: 15, minute: 37)
     assert clock1 == clock2
   end
 
   def test_clocks_a_minute_apart
-    skip
     clock1 = Clock.new(hour: 15, minute: 36)
     clock2 = Clock.new(hour: 15, minute: 37)
     refute clock1 == clock2
   end
 
   def test_clocks_an_hour_apart
-    skip
     clock1 = Clock.new(hour: 14, minute: 37)
     clock2 = Clock.new(hour: 15, minute: 37)
     refute clock1 == clock2
