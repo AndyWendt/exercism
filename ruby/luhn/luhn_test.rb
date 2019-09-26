@@ -59,7 +59,6 @@ class LuhnTest < Minitest::Test
   end
 
   def test_single_zero_with_space_is_invalid
-    skip
     refute Luhn.valid?(" 0")
   end
 
@@ -74,7 +73,6 @@ class LuhnTest < Minitest::Test
   end
 
   def test_strings_with_non_digits_is_invalid
-    skip
     refute Luhn.valid?(":9")
   end
 end
