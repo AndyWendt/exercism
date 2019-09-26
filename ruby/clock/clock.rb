@@ -1,4 +1,5 @@
 class Clock
+  attr_reader :hour, :minute
   def initialize(hour: 0, minute: 0)
     @hour = hour
     @minute = minute
@@ -12,6 +13,12 @@ class Clock
     minutes = create_time_string(minutes_remainder)
 
     "#{hours}:#{minutes}"
+  end
+
+  def +(clock_b)
+    hour = @hour + clock_b.hour
+    minute = @minute + clock_b.minute
+    Clock.new(hour: hour, minute: minute)
   end
 
   private
