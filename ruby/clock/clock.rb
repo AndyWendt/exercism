@@ -21,6 +21,12 @@ class Clock
     Clock.new(hour: hour, minute: minute)
   end
 
+  def -(clock_b)
+    hour = @hour - clock_b.hour
+    minute = @minute - clock_b.minute
+    Clock.new(hour: hour, minute: minute)
+  end
+
   private
 
   def create_time_string(number)

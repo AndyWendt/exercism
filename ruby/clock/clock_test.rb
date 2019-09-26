@@ -125,49 +125,41 @@ class ClockTest < Minitest::Test
   end
 
   def test_subtract_minutes
-    skip
     clock1 = Clock.new(hour: 10, minute: 3)
     assert_equal "10:00", (clock1 - Clock.new(minute: 3)).to_s
   end
 
   def test_subtract_to_previous_hour
-    skip
     clock1 = Clock.new(hour: 10, minute: 3)
     assert_equal "09:33", (clock1 - Clock.new(minute: 30)).to_s
   end
 
   def test_subtract_more_than_an_hour
-    skip
     clock1 = Clock.new(hour: 10, minute: 3)
     assert_equal "08:53", (clock1 - Clock.new(minute: 70)).to_s
   end
 
   def test_subtract_across_midnight
-    skip
     clock1 = Clock.new(hour: 0, minute: 3)
     assert_equal "23:59", (clock1 - Clock.new(minute: 4)).to_s
   end
 
   def test_subtract_more_than_two_hours
-    skip
     clock1 = Clock.new(hour: 0, minute: 0)
     assert_equal "21:20", (clock1 - Clock.new(minute: 160)).to_s
   end
 
   def test_subtract_more_than_two_hours_with_borrow
-    skip
     clock1 = Clock.new(hour: 6, minute: 15)
     assert_equal "03:35", (clock1 - Clock.new(minute: 160)).to_s
   end
 
   def test_subtract_more_than_one_day
-    skip
     clock1 = Clock.new(hour: 5, minute: 32)
     assert_equal "04:32", (clock1 - Clock.new(minute: 1500)).to_s
   end
 
   def test_subtract_more_than_two_days
-    skip
     clock1 = Clock.new(hour: 2, minute: 20)
     assert_equal "00:20", (clock1 - Clock.new(minute: 3000)).to_s
   end
