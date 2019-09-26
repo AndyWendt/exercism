@@ -1,5 +1,5 @@
 class Luhn
   def self.valid?(string)
-    false
+    return false unless string.length > 1
   end
 end
