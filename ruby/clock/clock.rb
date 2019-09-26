@@ -5,9 +5,8 @@ class Clock
   end
 
   def to_s
-    hours = @hour % 24
     minutes_remainder = @minute % 60
-    hours = create_time_string(hours + minute_hours_to_add)
+    hours = create_time_string(total_hours(@hour + minute_hours_to_add))
     minutes = create_time_string(minutes_remainder)
 
     "#{hours}:#{minutes}"
@@ -23,5 +22,9 @@ class Clock
   def minute_hours_to_add
     return 0 if @minute < 60
     @minute / 60
+  end
+
+  def total_hours(hours)
+    hours % 24
   end
 end
