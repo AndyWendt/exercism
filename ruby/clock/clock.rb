@@ -6,13 +6,8 @@ class Clock
   end
 
   def to_s
-    minutes = (@hour * 60) + @minute
-    minutes_remainder = minutes % 60
-    hour_minutes = (minutes - minutes_remainder) / 60
-    hours = create_time_string(total_hours(hour_minutes))
-    minutes = create_time_string(minutes_remainder)
-
-    "#{hours}:#{minutes}"
+    time = calc_time(@hour, @minute)
+    "#{time[:hours]}:#{time[:minutes]}"
   end
 
   def +(clock_b)
@@ -32,6 +27,19 @@ class Clock
   end
 
   private
+
+  def calc_time(hour, minute)
+    minutes = (hour * 60) + minute
+    minutes_remainder = minutes % 60
+    hour_minutes = (minutes - minutes_remainder) / 60
+    hours = create_time_string(total_hours(hour_minutes))
+    minutes = create_time_string(minutes_remainder)
+
+    {
+      hours: hours,
+      minutes: minutes
+    }
+  end
 
   def create_time_string(number)
     return number if number > 9
