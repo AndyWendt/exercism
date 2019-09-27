@@ -26,7 +26,7 @@ class Clock
     a = calc_time(@hour, @minute)
     b = calc_time(clock_b.hour, clock_b.minute)
 
-    a[:hour] == b[:hour] && a[:minute] == b[:minute]
+    a[:hours] == b[:hours] && a[:minutes] == b[:minutes]
   end
 
   private
