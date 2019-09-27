@@ -23,7 +23,10 @@ class Clock
   end
 
   def ==(clock_b)
-    @hour == clock_b.hour && @minute == clock_b.minute
+    a = calc_time(@hour, @minute)
+    b = calc_time(clock_b.hour, clock_b.minute)
+
+    a[:hour] == b[:hour] && a[:minute] == b[:minute]
   end
 
   private

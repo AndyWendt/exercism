@@ -183,7 +183,6 @@ class ClockTest < Minitest::Test
   end
 
   def test_clocks_with_hour_overflow
-    skip
     clock1 = Clock.new(hour: 10, minute: 37)
     clock2 = Clock.new(hour: 34, minute: 37)
     assert clock1 == clock2
