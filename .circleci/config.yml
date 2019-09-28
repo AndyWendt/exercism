@@ -8,7 +8,7 @@ jobs:
       - run: echo "lets test"
   test:
     docker:
-      - image: circleci/<language>:ruby:2.4.1
+      - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: rake test
