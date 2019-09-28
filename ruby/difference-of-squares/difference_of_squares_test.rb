@@ -4,7 +4,7 @@ require_relative 'difference_of_squares'
 # Common test data version: 1.2.0 1b6851d
 class DifferenceOfSquaresTest < Minitest::Test
   def test_square_of_sum_1
-    # skip
+    skip
     assert_equal 1, Squares.new(1).square_of_sum
   end
 

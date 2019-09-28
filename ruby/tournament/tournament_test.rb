@@ -4,7 +4,7 @@ require_relative 'tournament'
 # Common test data version: 1.4.0 ee01fe0
 class TournamentTest < Minitest::Test
   def test_just_the_header_if_no_input
-    # skip
+    skip
     input = <<~INPUT
 
     INPUT

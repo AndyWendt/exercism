@@ -1,0 +1,3 @@
+class Squares
+
+end

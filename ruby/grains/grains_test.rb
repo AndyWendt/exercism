@@ -4,7 +4,7 @@ require_relative 'grains'
 # Common test data version: 1.2.0 2ec42ab
 class GrainsTest < Minitest::Test
   def test_1
-    # skip
+    skip
     assert_equal 1, Grains.square(1)
   end
 

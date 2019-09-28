@@ -1,7 +1,7 @@
 class Phrase
   def initialize(string)
     phrase_string = string.strip.gsub(/[^0-9A-Za-z,' ]/, '')
-    @words = replace_quotes(phrase_string).split(/(?:[, \s]+)/)
+    @words = replace_quotes(phrase_string).split(/(?:[,\s]+)/)
   end
 
   def word_count

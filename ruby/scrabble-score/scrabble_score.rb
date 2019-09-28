@@ -35,7 +35,7 @@ class Scrabble
     }
 
     score = 0
-    puts @string
+
     for i in 0..(@string.length - 1)
       letter = @string[i]
       letter_score = values[letter.to_sym] || 0
