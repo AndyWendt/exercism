@@ -1,11 +1,5 @@
 version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/:ruby:2.4.1
-    steps:
-      - checkout
-      - run: echo "lets test"
   test:
     docker:
       - image: circleci/ruby:2.4.1
@@ -16,5 +10,4 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - build
       - test
