@@ -2,8 +2,8 @@ require 'prime'
 
 class Raindrops
   def self.convert(number)
-    factors = number.prime_division.map { |factors| factors[0] }
-    sounds = listen_for_sounds(factors)
+    calculated_factors = number.prime_division.map { |factors| factors[0] }
+    sounds = listen_for_sounds(calculated_factors)
     return sounds.join('') unless sounds.empty?
 
     number.to_s

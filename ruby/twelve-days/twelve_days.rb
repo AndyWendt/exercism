@@ -6,5 +6,6 @@ class TwelveDays
       3 => {day: 'third', present: "three French Hens"},
       4 => {day: 'fourth', present: "four Calling Birds"},
     }
+    days
   end
 end
