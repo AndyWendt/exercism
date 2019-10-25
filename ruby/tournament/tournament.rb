@@ -64,7 +64,6 @@ class Tournament
     return 1 if outcome == 'draw'
     return 0 if (outcome == 'loss' && team == 1)
     return 0 if (outcome == 'win' && team == 2)
-    return 3 if (outcome == 'win' && team == 1)
     3
   end
 end
