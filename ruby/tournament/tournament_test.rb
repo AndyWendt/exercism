@@ -72,7 +72,6 @@ class TournamentTest < Minitest::Test
   end
 
   def test_there_can_be_more_than_one_match
-    skip
     input = <<~INPUT
     Allegoric Alaskans;Blithering Badgers;win
     Allegoric Alaskans;Blithering Badgers;win
@@ -88,7 +87,6 @@ class TournamentTest < Minitest::Test
   end
 
   def test_there_can_be_more_than_one_winner
-    skip
     input = <<~INPUT
     Allegoric Alaskans;Blithering Badgers;loss
     Allegoric Alaskans;Blithering Badgers;win
@@ -104,7 +102,6 @@ class TournamentTest < Minitest::Test
   end
 
   def test_there_can_be_more_than_two_teams
-    skip
     input = <<~INPUT
     Allegoric Alaskans;Blithering Badgers;win
     Blithering Badgers;Courageous Californians;win
@@ -122,7 +119,6 @@ class TournamentTest < Minitest::Test
   end
 
   def test_typical_input
-    skip
     input = <<~INPUT
     Allegoric Alaskans;Blithering Badgers;win
     Devastating Donkeys;Courageous Californians;draw
@@ -144,7 +140,6 @@ class TournamentTest < Minitest::Test
   end
 
   def test_incomplete_competition_not_all_pairs_have_played
-    skip
     input = <<~INPUT
     Allegoric Alaskans;Blithering Badgers;loss
     Devastating Donkeys;Allegoric Alaskans;loss
