@@ -16,30 +16,39 @@ class TwelveDaysTest < Minitest::Test
   end
 
   def test_it_has_the_first_day
-    assert_equal song_lines.lines.first, TwelveDays.song.lines.first
+    line_assertions(0, "Partridge")
   end
 
   def test_it_has_the_second_day
-    assert_equal song_lines.lines[2], TwelveDays.song.lines[2]
+    line_assertions(2, "Doves")
   end
 
   def test_it_has_the_third_day
-    assert_equal song_lines.lines[4], TwelveDays.song.lines[4]
+    line_assertions(4, "Hens")
   end
 
   def test_it_has_the_fourth_day
-    assert_equal song_lines.lines[6], TwelveDays.song.lines[6]
+    line_assertions(6, "Birds")
   end
 
   def test_it_has_the_fifth_day
-    assert_equal song_lines.lines[8], TwelveDays.song.lines[8]
+    line_assertions(8, "Rings")
   end
 
   def test_it_has_the_sixth_day
-    assert_equal song_lines.lines[10], TwelveDays.song.lines[10]
+    line_assertions(10, "Geese")
   end
 
   private
+
+  def line_assertions(line_number, includes_word)
+    assertion_line = song_lines.lines[line_number]
+    actual_line = TwelveDays.song.lines[line_number]
+
+    assert assertion_line.include?(includes_word)
+    assert actual_line.include?(includes_word)
+    assert_equal assertion_line, actual_line
+  end
 
   def song_lines
     song_file = File.expand_path('../song.txt', __FILE__)
