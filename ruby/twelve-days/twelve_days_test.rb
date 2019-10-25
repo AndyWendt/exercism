@@ -16,12 +16,12 @@ class TwelveDaysTest < Minitest::Test
   end
 
   def test_it_has_the_first_day
-    assert_equal song_lines.lines.first.strip, TwelveDays.song.lines.first
+    assert_equal song_lines.lines.first, TwelveDays.song.lines.first
   end
 
   def test_it_has_the_second_day
     skip
-    assert_equal song_lines.lines[2].strip, TwelveDays.song.lines.first
+    assert_equal song_lines.lines[2], TwelveDays.song.lines.first
   end
 
   private

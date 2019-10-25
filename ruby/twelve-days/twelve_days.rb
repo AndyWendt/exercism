@@ -13,6 +13,6 @@ class TwelveDays
     #
     # end
 
-    "On the #{days[1][:day]} day of Christmas my true love gave to me: #{days[1][:gift]}."
+    "On the #{days[1][:day]} day of Christmas my true love gave to me: #{days[1][:gift]}.\n"
   end
 end
