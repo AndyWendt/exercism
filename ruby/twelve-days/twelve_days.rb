@@ -6,13 +6,13 @@ class TwelveDays
       3 => {day: 'third', gift: "three French Hens"},
       4 => {day: 'fourth', gift: "four Calling Birds"},
     }
-    days
 
-    # 'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.'
-    # for i in 1..12
-    #
-    # end
+    days.reduce("") do |string, (key, day)|
+      string + "On the #{day[:day]} day of Christmas my true love gave to me: #{previous(days, key)}#{day[:gift]}.\n"
+    end
+  end
 
-    "On the #{days[1][:day]} day of Christmas my true love gave to me: #{days[1][:gift]}.\n"
+  def self.previous(days, current)
+    return "" unless current > 1
   end
 end
