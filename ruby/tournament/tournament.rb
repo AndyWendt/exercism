@@ -12,7 +12,7 @@ class Tournament
 
     out = create_line('Team', 'MP', 'W', 'D', 'L', 'P')
 
-    tallys.sort_by {|team, tally| -tally[:points] }.reduce(out) do |carry, (team, tally)|
+    tallys.sort_by {|team, tally| [-tally[:points], team] }.reduce(out) do |carry, (team, tally)|
       carry + create_line(team, tally[:matches_played], tally[:wins], tally[:draws], tally[:losses], tally[:points])
     end
   end
