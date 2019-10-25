@@ -1,7 +1,7 @@
 class Tournament
   def self.tally(input)
     tallys = {}
-    input.lines.map {|line| line.split(';')}.each do |line|
+    input.strip.lines.map {|line| line.split(';')}.each do |line|
       puts line
       team1 = line[0].strip
       team2 = line[1].strip
@@ -12,11 +12,9 @@ class Tournament
 
     out = create_line('Team', 'MP', 'W', 'D', 'L', 'P')
 
-    l = tallys.reduce(out) do |carry, (team, tally)|
+    tallys.reduce(out) do |carry, (team, tally)|
       carry + create_line(team, tally[:matches_played], tally[:wins], tally[:draws], tally[:losses], tally[:points])
     end
-    puts l
-    l
   end
 
   private
