@@ -58,7 +58,6 @@ class TournamentTest < Minitest::Test
   end
 
   def test_a_draw_is_one_point_each
-    skip
     input = <<~INPUT
     Allegoric Alaskans;Blithering Badgers;draw
     INPUT
