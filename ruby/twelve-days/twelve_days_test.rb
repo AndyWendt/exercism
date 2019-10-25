@@ -20,7 +20,6 @@ class TwelveDaysTest < Minitest::Test
   end
 
   def test_it_has_the_second_day
-    skip
     assert_equal song_lines.lines[2], TwelveDays.song.lines[2]
   end
 

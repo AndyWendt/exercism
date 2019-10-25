@@ -8,11 +8,17 @@ class TwelveDays
     }
 
     days.reduce("") do |string, (key, day)|
-      string + "On the #{day[:day]} day of Christmas my true love gave to me: #{previous(days, key)}#{day[:gift]}.\n"
+      string + "On the #{day[:day]} day of Christmas my true love gave to me: #{day[:gift]}#{previous(days, key)}.\n\n"
     end
   end
 
   def self.previous(days, current)
     return "" unless current > 1
+    gifts = days.select{|key, value| (1...current).include?(key)}.map do |key,day|
+      gift = key == 1 ? 'and ' : ''
+      gift += day[:gift]
+      gift
+    end
+    ", " + gifts.reverse.join(', ')
   end
 end
