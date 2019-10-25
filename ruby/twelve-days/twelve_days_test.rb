@@ -43,6 +43,10 @@ class TwelveDaysTest < Minitest::Test
     line_assertions(12, "Swans")
   end
 
+  def test_it_has_the_eighth_day
+    line_assertions(14, "Maids")
+  end
+
   private
 
   def line_assertions(line_number, includes_word)
