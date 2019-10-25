@@ -23,6 +23,10 @@ class TwelveDaysTest < Minitest::Test
     assert_equal song_lines.lines[2], TwelveDays.song.lines[2]
   end
 
+  def test_it_has_the_third_day
+    assert_equal song_lines.lines[4], TwelveDays.song.lines[4]
+  end
+
   private
 
   def song_lines
