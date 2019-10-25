@@ -10,6 +10,8 @@ class TwelveDays
       7 => {day: 'seventh', gift: "seven Swans-a-Swimming"},
       8 => {day: 'eighth', gift: "eight Maids-a-Milking"},
       9 => {day: 'ninth', gift: "nine Ladies Dancing"},
+      10 => {day: 'tenth', gift: "ten Lords-a-Leaping"},
+      11 => {day: 'eleventh', gift: "eleven Pipers Piping"},
     }
 
     days.reduce("") do |string, (key, day)|
