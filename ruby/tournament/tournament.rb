@@ -1,5 +1,5 @@
 class Tournament
   def self.tally(input)
-    "Team                           | MP |  W |  D |  L |  P\n"
+    "Team".ljust(31, ' ') + "| MP |  W |  D |  L |  P\n"
   end
 end
