@@ -12,8 +12,22 @@ class TwelveDaysTest < Minitest::Test
   # specifically want feedback on them.
   def test_the_whole_song
     skip
+    assert_equal song_lines, TwelveDays.song
+  end
+
+  def test_it_has_the_first_day
+    assert_equal song_lines.lines.first.strip, TwelveDays.song.lines.first
+  end
+
+  def test_it_has_the_second_day
+    skip
+    assert_equal song_lines.lines[2].strip, TwelveDays.song.lines.first
+  end
+
+  private
+
+  def song_lines
     song_file = File.expand_path('../song.txt', __FILE__)
-    expected = IO.read(song_file)
-    assert_equal expected, TwelveDays.song
+    IO.read(song_file)
   end
 end
