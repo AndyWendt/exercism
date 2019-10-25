@@ -16,7 +16,7 @@ class TwelveDays
     }
 
     days.reduce("") do |string, (key, day)|
-      string + "On the #{day[:day]} day of Christmas my true love gave to me: #{day[:gift]}#{previous(days, key)}.\n\n"
+      string + "On the #{day[:day]} day of Christmas my true love gave to me: #{day[:gift]}#{previous(days, key)}.\n#{(key < 12 ? "\n" : '')}"
     end
   end
 

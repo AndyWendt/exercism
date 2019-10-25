@@ -11,7 +11,6 @@ class TwelveDaysTest < Minitest::Test
   # There's no need to submit the tests you write, unless you
   # specifically want feedback on them.
   def test_the_whole_song
-    skip
     assert_equal song_lines, TwelveDays.song
   end
 
@@ -60,7 +59,11 @@ class TwelveDaysTest < Minitest::Test
   end
 
   def test_it_has_the_twelfth_day
-    line_assertions(20, "Drummers")
+    line_assertions(22, "Drummers")
+  end
+
+  def test_line_count
+    assert_equal(song_lines.lines.count, TwelveDays.song.lines.count)
   end
 
   private
