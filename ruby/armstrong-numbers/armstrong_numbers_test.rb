@@ -12,7 +12,6 @@ class ArmstrongNumbersTest < Minitest::Test
   end
 
   def test_there_are_no_2_digit_armstrong_numbers
-    skip
     refute ArmstrongNumbers.include?(10)
   end
 

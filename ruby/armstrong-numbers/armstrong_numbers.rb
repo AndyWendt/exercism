@@ -1,5 +1,6 @@
 class ArmstrongNumbers
   def self.include?(number)
-    number ** 1
+    digits = number.digits
+    number == digits.reduce(0) { |sum, n| sum + (n ** digits.length) }
   end
 end
