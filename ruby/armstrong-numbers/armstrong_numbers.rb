@@ -1,5 +1,5 @@
 class ArmstrongNumbers
-  def self.include?(test_number)
-    true
+  def self.include?(number)
+    number ** 1
   end
 end
