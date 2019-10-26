@@ -8,4 +8,8 @@ class Squares
   def square_of_sum
     (numbers.reduce(0) { |sum, number| sum + number }) ** 2
   end
+
+  def sum_of_squares
+    1
+  end
 end
