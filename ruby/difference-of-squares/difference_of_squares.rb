@@ -10,6 +10,6 @@ class Squares
   end
 
   def sum_of_squares
-    1
+    numbers.reduce(0) { |sum, number| sum + (number ** 2) }
   end
 end
