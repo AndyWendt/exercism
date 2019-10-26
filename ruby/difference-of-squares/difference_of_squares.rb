@@ -12,4 +12,8 @@ class Squares
   def sum_of_squares
     numbers.reduce(0) { |sum, number| sum + (number ** 2) }
   end
+
+  def difference
+    0
+  end
 end
