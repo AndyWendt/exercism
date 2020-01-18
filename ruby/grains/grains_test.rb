@@ -50,7 +50,6 @@ class GrainsTest < Minitest::Test
   end
 
   def test_returns_the_total_number_of_grains_on_the_board
-    skip
     assert_equal 18_446_744_073_709_551_615, Grains.total
   end
 end
