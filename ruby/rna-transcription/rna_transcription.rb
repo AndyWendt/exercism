@@ -15,6 +15,8 @@ class Complement
       A: "U"
     }
 
+    # this would have been a better solution
+    # string.tr()
     string.chars.map {|ch| map[ch.to_sym] }.join
   end
 end
