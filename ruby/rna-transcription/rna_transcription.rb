@@ -8,6 +8,13 @@ To get started with TDD, see the `README.md` file in your
 
 class Complement
   def self.of_dna(string)
-    ""
+    map = {
+      G: "C",
+      C: "G",
+      T: "A",
+      A: "U"
+    }
+
+    string.chars.map {|ch| map[ch.to_sym] }.join
   end
 end
