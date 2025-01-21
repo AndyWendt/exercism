@@ -11,7 +11,7 @@ module Port
 
   def self.get_terminal(ship_identifier)
     id = ship_identifier.to_s.slice(0,3)
-    return :A if ["OIL", "GAS"].include?(id.upcase)
+    return :A if %w[OIL GAS].include?(id.upcase)
     :B
   end
 end
