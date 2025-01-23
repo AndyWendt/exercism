@@ -14,7 +14,7 @@ class Anagram
   end
 
   def match(test_words)
-    test_words.reject {|test_word| test_word.downcase == word.downcase}\
+    test_words.reject {|test_word| test_word.downcase == word.downcase}
               .select {|test_word| test_word.downcase.split('').sort == word.downcase.split('').sort}
   end
 end
