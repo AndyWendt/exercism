@@ -19,34 +19,28 @@ class DndCharacter
     modifier_map[constitution]
   end
 
+  attr_reader :constitution, :strength, :dexterity, :intelligence, :wisdom, :charisma
+
   def initialize
-  end
-
-  def constitution
-    3
-  end
-
-  def strength
-    18
-  end
-
-  def dexterity
-    17
-  end
-
-  def intelligence
-    13
-  end
-
-  def wisdom
-    17
-  end
-
-  def charisma
-    13
+    @constitution = rolls_total
+    @strength = rolls_total
+    @dexterity = rolls_total
+    @intelligence = rolls_total
+    @wisdom = rolls_total
+    @charisma = rolls_total
   end
 
   def hitpoints
-    6
+    DndCharacter.modifier(constitution) + 10
+  end
+
+  private
+
+  def rolls_total
+    [roll, roll, roll, roll].sort[1...4].sum
+  end
+
+  def roll
+    rand(1..6)
   end
 end
