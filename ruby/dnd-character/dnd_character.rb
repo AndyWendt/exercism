@@ -22,12 +22,12 @@ class DndCharacter
   attr_reader :constitution, :strength, :dexterity, :intelligence, :wisdom, :charisma
 
   def initialize
-    @constitution = rolls_total
-    @strength = rolls_total
-    @dexterity = rolls_total
-    @intelligence = rolls_total
-    @wisdom = rolls_total
-    @charisma = rolls_total
+    @constitution = ability_score
+    @strength = ability_score
+    @dexterity = ability_score
+    @intelligence = ability_score
+    @wisdom = ability_score
+    @charisma = ability_score
   end
 
   def hitpoints
@@ -36,7 +36,7 @@ class DndCharacter
 
   private
 
-  def rolls_total
+  def ability_score
     [roll, roll, roll, roll].sort[1...4].sum
   end
 
