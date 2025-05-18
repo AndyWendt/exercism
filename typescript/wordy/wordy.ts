@@ -1,6 +1,6 @@
 export const answer = (input: string) => {
   const trimmed = input
-      .replace(/^what is /i, '')
+      .replace(/^what is\s?/i, '')
       .replace(/\?$/, '')
       .trim();
 
@@ -11,12 +11,12 @@ export const answer = (input: string) => {
     "divided by": "/",
   };
 
-  const parts = trimmed.split(/(plus|minus|multiplied by|divided by)/);
+  const parts = trimmed.split(/(plus|minus|multiplied by|divided by)/).filter(el => el !== "");
 
   let mappedParts = parts.map((item) => {
     const number = Number(item);
 
-    if (Number.isNaN(number)) {
+    if (Number.isNaN(number)
       if (!operators.hasOwnProperty(item)) {
         throw new Error("Unknown operation");
       }
@@ -25,6 +25,10 @@ export const answer = (input: string) => {
 
     return number;
   });
+
+  if (mappedParts.length in [0, 2]) {
+    throw new Error("Syntax error");
+  }
 
   if (mappedParts.length > 3) {
     mappedParts.splice(3, 0, ")");

@@ -74,11 +74,11 @@ describe('Wordy', () => {
     )
   })
 
-  xit('reject problem missing an operand', () => {
+  it('reject problem missing an operand', () => {
     expect(() => answer('What is 1 plus?')).toThrow(new Error('Syntax error'))
   })
 
-  xit('reject problem with no operands or operators', () => {
+  it('reject problem with no operands or operators', () => {
     expect(() => answer('What is?')).toThrow(new Error('Syntax error'))
   })
 
