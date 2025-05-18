@@ -7,9 +7,11 @@ export const answer = (input: string) => {
   const operators: Record<string, string> = {
     plus: "+",
     minus: "-",
+    "multiplied by": "*",
+    "divided by": "/",
   };
 
-  const parts = trimmed.split(/(plus|minus)/);
+  const parts = trimmed.split(/(plus|minus|multiplied by|divided by)/);
 
   const mappedParts = parts.map((item) => {
     const number = Number(item);

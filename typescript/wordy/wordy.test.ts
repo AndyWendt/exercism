@@ -26,31 +26,31 @@ describe('Wordy', () => {
     expect(answer('What is 4 minus -12?')).toEqual(16)
   })
 
-  xit('multiplication', () => {
+  it('multiplication', () => {
     expect(answer('What is -3 multiplied by 25?')).toEqual(-75)
   })
 
-  xit('division', () => {
+  it('division', () => {
     expect(answer('What is 33 divided by -3?')).toEqual(-11)
   })
 
-  xit('multiple additions', () => {
+  it('multiple additions', () => {
     expect(answer('What is 1 plus 1 plus 1?')).toEqual(3)
   })
 
-  xit('addition and subtraction', () => {
+  it('addition and subtraction', () => {
     expect(answer('What is 1 plus 5 minus -2?')).toEqual(8)
   })
 
-  xit('multiple subtraction', () => {
+  it('multiple subtraction', () => {
     expect(answer('What is 20 minus 4 minus 13?')).toEqual(3)
   })
 
-  xit('subtraction then addition', () => {
+  it('subtraction then addition', () => {
     expect(answer('What is 17 minus 6 plus 3?')).toEqual(14)
   })
 
-  xit('multiple multiplication', () => {
+  it('multiple multiplication', () => {
     expect(answer('What is 2 multiplied by -2 multiplied by 3?')).toEqual(-12)
   })
 
