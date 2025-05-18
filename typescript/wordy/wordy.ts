@@ -11,16 +11,27 @@ export const answer = (input: string) => {
     "divided by": "/",
   };
 
-  const parts = trimmed.split(/(plus|minus|multiplied by|divided by)/).filter(el => el !== "");
+  const parts = trimmed.split(/(plus|minus|multiplied by|divided by)/)
+      .filter(el => el?.trim() !== "");
 
-  let mappedParts = parts.map((item) => {
+  let mappedParts = parts.map((item, index) => {
     const number = Number(item);
 
     if (Number.isNaN(number)) {
       if (!operators.hasOwnProperty(item)) {
         throw new Error("Unknown operation");
       }
+
+      if ((index % 2) === 0 ) {
+        throw new Error("Syntax error");
+      }
+
+
       return operators[item];
+    }
+
+    if ((index % 2) !== 0) {
+      throw new Error("Syntax error");
     }
 
     return number;

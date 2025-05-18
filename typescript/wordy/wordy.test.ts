@@ -82,7 +82,7 @@ describe('Wordy', () => {
     expect(() => answer('What is?')).toThrow(new Error('Syntax error'))
   })
 
-  xit('reject two operations in a row', () => {
+  it('reject two operations in a row', () => {
     expect(() => answer('What is 1 plus plus 2?')).toThrow(
       new Error('Syntax error')
     )
