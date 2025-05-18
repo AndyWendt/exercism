@@ -6,7 +6,7 @@ describe('Wordy', () => {
     expect(answer('What is 5?')).toEqual(5)
   })
 
-  xit('addition', () => {
+  it('addition', () => {
     expect(answer('What is 1 plus 1?')).toEqual(2)
   })
 
