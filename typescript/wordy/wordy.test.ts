@@ -68,7 +68,7 @@ describe('Wordy', () => {
     )
   })
 
-  xit('Non math question', () => {
+  it('Non math question', () => {
     expect(() => answer('Who is the President of the United States?')).toThrow(
       new Error('Unknown operation')
     )
