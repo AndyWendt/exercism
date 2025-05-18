@@ -13,7 +13,7 @@ export const answer = (input: string) => {
 
   const parts = trimmed.split(/(plus|minus|multiplied by|divided by)/);
 
-  const mappedParts = parts.map((item) => {
+  let mappedParts = parts.map((item) => {
     const number = Number(item);
 
     if (Number.isNaN(number)) {
@@ -22,6 +22,11 @@ export const answer = (input: string) => {
 
     return number;
   });
+
+  if (mappedParts.length > 3) {
+    mappedParts.splice(3, 0, ")");
+    mappedParts.unshift("(");
+  }
 
   const joined = mappedParts.join(" ");
 

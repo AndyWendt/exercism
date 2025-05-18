@@ -54,7 +54,7 @@ describe('Wordy', () => {
     expect(answer('What is 2 multiplied by -2 multiplied by 3?')).toEqual(-12)
   })
 
-  xit('addition and multiplication', () => {
+  it('addition and multiplication', () => {
     expect(answer('What is -3 plus 7 multiplied by -2?')).toEqual(-8)
   })
 
