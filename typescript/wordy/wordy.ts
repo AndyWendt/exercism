@@ -16,7 +16,7 @@ export const answer = (input: string) => {
   let mappedParts = parts.map((item) => {
     const number = Number(item);
 
-    if (Number.isNaN(number)
+    if (Number.isNaN(number)) {
       if (!operators.hasOwnProperty(item)) {
         throw new Error("Unknown operation");
       }
@@ -26,7 +26,7 @@ export const answer = (input: string) => {
     return number;
   });
 
-  if (mappedParts.length in [0, 2]) {
+  if ([0, 2].includes(mappedParts.length)) {
     throw new Error("Syntax error");
   }
 
