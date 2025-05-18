@@ -62,7 +62,7 @@ describe('Wordy', () => {
     expect(answer('What is -12 divided by 2 divided by -3?')).toEqual(2)
   })
 
-  xit('unknown operation', () => {
+  it('unknown operation', () => {
     expect(() => answer('What is 52 cubed?')).toThrow(
       new Error('Unknown operation')
     )

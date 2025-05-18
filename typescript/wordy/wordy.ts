@@ -17,6 +17,9 @@ export const answer = (input: string) => {
     const number = Number(item);
 
     if (Number.isNaN(number)) {
+      if (!operators.hasOwnProperty(item)) {
+        throw new Error("Unknown operation");
+      }
       return operators[item];
     }
 
