@@ -4,20 +4,26 @@ export const answer = (input: string) => {
       .replace(/\?$/, '')
       .trim();
 
-  const [operand1, operator, operand2] = trimmed.split(/\s+/);
-
-  if (!operator || !operand2) {
-    return Number(operand1);
-  }
-
   const operators: Record<string, string> = {
     plus: "+",
     minus: "-",
   };
 
-  const op = operators[operator];
+  const parts = trimmed.split(/(plus|minus)/);
 
-  const result = eval(`${operand1} ${op} ${operand2}`);
+  const mappedParts = parts.map((item) => {
+    const number = Number(item);
+
+    if (Number.isNaN(number)) {
+      return operators[item];
+    }
+
+    return number;
+  });
+
+  const joined = mappedParts.join(" ");
+
+  const result = eval(joined);
 
   return result;
 }
