@@ -11,7 +11,7 @@ export const answer = (input: string) => {
     "divided by": "/",
   };
 
-  const parts = trimmed.split(/(plus|minus|multiplied by|divided by|\d+)/)
+  const parts = trimmed.split(/(plus|minus|multiplied by|divided by|-?\d+)/)
       .filter(el => el?.trim() !== "");
 
   let mappedParts = parts.map((item, index) => {
