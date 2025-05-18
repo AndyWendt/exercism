@@ -11,7 +11,8 @@ export const answer = (input: string) => {
   }
 
   const operators: Record<string, string> = {
-    plus: "+"
+    plus: "+",
+    minus: "-",
   };
 
   const op = operators[operator];

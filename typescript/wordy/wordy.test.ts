@@ -10,19 +10,19 @@ describe('Wordy', () => {
     expect(answer('What is 1 plus 1?')).toEqual(2)
   })
 
-  xit('more addition', () => {
+  it('more addition', () => {
     expect(answer('What is 53 plus 2?')).toEqual(55)
   })
 
-  xit('addition with negative numbers', () => {
+  it('addition with negative numbers', () => {
     expect(answer('What is -1 plus -10?')).toEqual(-11)
   })
 
-  xit('large addition', () => {
+  it('large addition', () => {
     expect(answer('What is 123 plus 45678?')).toEqual(45801)
   })
 
-  xit('subtraction', () => {
+  it('subtraction', () => {
     expect(answer('What is 4 minus -12?')).toEqual(16)
   })
 
